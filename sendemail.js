@@ -1,3 +1,5 @@
+// Functionality for user to send emails through the web
+
 const membershipform = document.getElementById('membership_form'); // Updated to match the exact ID from your form
 const query = document.getElementById('query');
 const email = document.getElementById('email');
