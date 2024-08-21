@@ -698,130 +698,171 @@ section.blog{
 }
 /*   === blog Section Styling Ends ===   */
 /* === calorie burn styling starts ===*/
-.calorie_burn {
-	background: url('images/calorie form/kettlebell-gym-equipment-still-life.jpg');
-	
-	background-color: rgba(0, 0, 0, 0000.1); 
-	/* background-color: #242d38; */
-	padding: 40px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	
-	
-	
-  }
-  
-  
-  .calorie_burn h1 {
-	font-size: 24px;
-	margin-bottom: 20px;
-	color: var(--primary-clr);
-  }
-  
-  .calorie_burn .gender {
-	margin-bottom: 20px;
-  }
-  
-  .calorie_burn .gender h2 {
-	font-size: 18px;
-	margin-bottom: 10px;
-	color: white;
-  }
-  
-  .calorie_burn .gender input[type="radio"] {
-	margin-right: 10px;
-	color:white;
-  }
-  
-  .calorie_burn .age, .calorie_burn .height, .calorie_burn .weight {
-	margin-bottom: 20px;
-  }
-  
-  .calorie_burn .age h2, .calorie_burn .height h2, .calorie_burn .weight h2 {
-	font-size: 18px;
-	margin-bottom: 10px;
-	color:white;
-  }
-  
-  .calorie_burn .age input, .calorie_burn .height input, .calorie_burn .weight input {
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	width: 100%;
-  }
- 
-  
-  .calorie_burn .pal_drop {
-	margin-bottom: 20px;
-  }
-  
-  .calorie_burn .pal_drop h2 {
-	font-size: 18px;
-	margin-bottom: 10px;
-	color:white;
-  }
-  
-  .calorie_burn .pal_drop select {
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	width: 100%;
-  }
-  
-  .calorie_burn #calculate_button {
-	padding: 10px 25px;
-	background-color: var(--primary-clr);
-	color: var(--light-heading-clr);
-	font-size: 15px;
-	font-weight: 500;
-	border: 1px solid transparent;
-	border-radius: 25px;
-	cursor: pointer;
-	transition: all 0.3s;
-  }
-  
-  .calorie_burn #calculate_button:hover {
-	background-color: transparent;
-	color: var(--primary-clr);
-	border: 1px solid var(--primary-clr);
-  }
-  .calorie_burn #clear_button {
-	padding: 10px 25px;
-	background-color: var(--primary-clr);
-	color: var(--light-heading-clr);
-	font-size: 15px;
-	font-weight: 500;
-	border: 1px solid transparent;
-	border-radius: 25px;
-	cursor: pointer;
-	transition: all 0.3s;
-  }
-  
-  .calorie_burn #clear_button:hover {
-	background-color: transparent;
-	color: var(--primary-clr);
-	border: 1px solid var(--primary-clr);
-  }
-  
-  .calorie_burn .results {
-	margin-top: 20px;
-  }
-  
-  .calorie_burn .results h3 {
-	font-size: 18px;
-	margin-bottom: 10px;
-	color: #666;
-  }
-  
-  .calorie_burn .results span {
-	font-size: 24px;
-	font-weight: bold;
-	color: #333;
-  }
-  
+
  
 /* === calorie burn styling ends ===*/
 
+  /* Body Styling */
+  .body .calculator-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f6f5f7;
+  }
+  
+  /* Container Styling */
+  .container .container-calculator {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    max-width: 800px;
+    width: 80%;
+    padding: 30px;
+    animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Form Title Styling */
+  .calculator-heading {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: slideIn 0.8s ease-in-out;
+  }
+  
+  /* Input Field Styling */
+  .input .weight-input,
+  .height-feet-input,
+  .height-inches-input,
+  .age-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .weight-input:focus,
+  .height-feet-input:focus,
+  .height-inches-input:focus,
+  .age-input:focus {
+    outline: none;
+    border-color: #f89c33;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(248, 156, 51, 0.5);
+  }
+  
+  /* Select Field Styling */
+  .select
+  .gender-select,
+  .activity-select {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .gender-select:focus,
+  .activity-select:focus {
+    outline: none;
+    border-color: #f89c33;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(248, 156, 51, 0.5);
+  }
+  
+  /* Button Styling */
+  .button
+  .calculate-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f89c33;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .calculate-button:hover {
+    background-color: #e88928;
+  }
+  
+  .calculate-button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Result Styling */
+  .result
+  .result {
+    margin-top: 80px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .result.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Bold the result figures */
+  .result-text span {
+    font-weight: bold;
+  }
+  
+  .result-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Animation Definitions */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 /*   === Footer Section Styling Starts ===   */
 section.page-footer{

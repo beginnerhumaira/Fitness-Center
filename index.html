@@ -4,11 +4,12 @@
 <head>
 	<!--  *****   Link To Custom CSS Style Sheet   *****  -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel= "stylesheet" type="text/css"   src="calculator_styling.css">
 
 	<!--  *****   Link To Font Awsome Icons   *****  -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 	<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
-
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<title>FitLife</title>
@@ -542,64 +543,62 @@
 	</div>
 	<!--   *** Website Wrapper Ends ***   -->
 	<!-- Modal Structure for Calorie Burn Calculator -->
-	<div id="calorieModal" class="modal">
+	<div id="calorieModal" class="modal" >
 		<div class="modal-content">
 			<span class="close-modal">&times;</span>
 			<!-- Calorie Burn Calculator Section -->
-			<div class="calorie_burn" id="calorie_burn">
-				<h1 id="info_h1">Please fill in the information to Calculate your Calorie burn:</h1>
-				<div class="gender">
-					<h2 id="gender_text">Gender:</h2>
-					<input type="radio" id="male" name="gender" value="male">
-					<label for="gender" style="color: white;">Male</label>
-					<input type="radio" id="female" name="gender" value="female">
-					<label for="gender" style="color: white;">Female</label>
-				</div>
-				<div class="age">
-					<h2>Age:</h2>
-					<input type="number" id="age" name="age" style="background: transparent; color: white;" required>
-					<label for="age" style="color: white;">in Years </label>
-				</div>
-				<div class="height">
-					<h2>Height:</h2>
-					<input type="number" id="height" name="height" style="background: transparent; color: white;" required>
-					<label for="height" style="color: white;">in cm</label>
-				</div>
-				<div class="weight">
-					<h2>Weight:</h2>
-					<input type="number" id="weight" name="weight" style="background: transparent; color: white;" required>
-					<label for="weight" style="color: white;">in kg</label>
-					<div class="pal_drop">
-						<h2 style="margin-top: 10px; color:#fa5a20">Physical activity level:</h2>
-						<label for="pal" style="color: white; ">Make your choice:</label>
-						<select id="pal" name="pal" required>
-							<option value="1.2">Little/no exercise (sedentary lifestyle)</option>
-							<option value="1.375">Light exercise 1-2 times/week</option>
-							<option value="1.55">Moderate exercise 2-3 times/week</option>
-							<option value="1.725">Hard exercise 4-5 times/week</option>
-							<option value="1.9">Physical job or hard exercise 6-7 times/week</option>
-							<option value="2.4">Professional athlete</option>
-						</select>
-					</div>
-				</div>
-				</form>
-				<button type="submit" id="calculate_button">Calculate</button>
-				<button type="reset" id="clear_button">Clear Form</button>
-				<div class="results">
-					<h3 id="tdee_result" style="color: white;">TDEE:</h3>
-				</div>
-			</div> 
-		</div>
-	</div>
+			<title>Calorie Burn Calculator</title>
+			<body id="calculator-body">
+				<div class="container" id="container-calculator">
+					<div class="form-container calculator-container" id="right-container">
+						<form action="#">
+							<h1 id="calculator-heading">Calorie Burn Calculator</h1>
+			  <label for="weight-input">Weight (pounds):</label>
+			  <input type="number" id="weight-input" placeholder="Enter your weight">
+			  <br><br>
+			  <label for="height-feet-input">Height (feet):</label>
+			  <input type="number" id="height-feet-input" placeholder="feet">
+			  <label for="height-inches-input">Height (inches):</label>
+			  <input type="number" id="height-inches-input" placeholder="inches">
+			  <br><br>
+			  <label for="age-input">Age:</label>
+			  <input type="number" id="age-input" placeholder="Enter your age">
+			  <br><br>
+			  <label for="gender-select">Gender:</label>
+			  <select id="gender-select">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			  </select>
+			  <br><br>
+			  <label for="activity-select">Activity Level:</label>
+			  <select id="activity-select">
+				<option value="sedentary">Sedentary (little or no exercise)</option>
+				<option value="light">Light (exercise 1-3 times/week)</option>
+				<option value="moderate">Moderate (exercise 4-5 times/week)</option>
+				<option value="active">Active (daily exercise or intense exercise 3-4 times/week)</option>
+				<option value="veryActive">Very Active (intense exercise 6-7 times/week)</option>
+				<option value="extraActive">Extra Active (very intense exercise daily, or physical job)</option>
+			  </select>
+			  <br><br>
+			  <button id="calculate-button">Calculate</button>
+			</form>
+			<div class="box" id="result"></div>
+			
+			
+			
+			
+				<script defer type="text/javascript" src="calculator.js"></script>
+			
+				<script defer type="text/javascript"
+					src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
+				<script defer type="text/javascript" src="sendemail.js"></script>
+				<script defer type="text/javascript" src="modal.js"></script>
+				
+			
+			</body>
+			
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+	
+    
+</head>
 
-
-
-	<script defer type="text/javascript" src="calculator.js"></script>
-
-	<script defer type="text/javascript"
-		src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
-	<script defer type="text/javascript" src="sendemail.js"></script>
-	<script defer type="text/javascript" src="modal.js"></script>
-
-</body>
-<!--   *** Link To Custom Script File ***   -->
